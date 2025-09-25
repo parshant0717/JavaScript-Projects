@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Info Cards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        color: whitesmoke;
+      }
+
+      #main {
+        padding: 30px 50px;
+      }
+
+      #heading {
+        display: flex;
+        justify-content: center;
+        margin-block: 20px 20px;
+        color: rgb(134, 141, 147);
+      }
+
+      form {
+        border: 1px solid gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: auto;
+        max-width: 500px;
+        padding: 10px;
+      }
+
+      input {
+        font-size: larger;
+        border: 1px solid gray;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
+      input::placeholder {
+        color: wheat;
+        opacity: 0.6;
+      }
+
+      #submit {
+        max-width: 50%;
+        align-self: center;
+        cursor: pointer;
+      }
+
+      #cardBody {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+      }
+      #card {
+        position: relative;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-inline: 20px;
+        width: 300px;
+      }
+      #deleteBtn {
+        position: absolute;
+        color: white;
+        background-color: #e90505;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        top: -8px;
+        right: -8px;
+        padding-inline: 3px;
+        border-radius: 2px;
+        font-size: 12px;
+      }
+
+      #profile {
+        position: absolute;
+        right: 20px;
+        top: 5px;
+      }
+      #profile img {
+        border-radius: 50%;
+      }
+      #name {
+        font-weight: bold;
+        font-size: large;
+      }
+
+      #email {
+        font-style: italic;
+        font-size: small;
+      }
+
+      #text {
+        margin-top: 30px;
+        padding-block: 5px;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="heading">Please fill the form to create a dynamic card!</h1>
+      <form action="">
+        <input type="url" required placeholder="Profile URL" />
+        <input type="text" placeholder="Name" />
+        <input type="text" required placeholder="Occupation" />
+        <input type="email" required placeholder="Email" />
+        <input type="text" required placeholder="About" />
+        <input id="submit" type="submit" />
+      </form>
+      <div id="cardBody"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
